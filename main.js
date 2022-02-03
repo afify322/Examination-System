@@ -19,7 +19,7 @@ regform.addEventListener('submit',(e)=>{
     validateConfirmPassword())
     {
         document.cookie=`${validateEmail()}=${validatePassword()};`
-        window.location.replace('index.html') 
+        window.location.replace('home.html') 
     }
 })
 
