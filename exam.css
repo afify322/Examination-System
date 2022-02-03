@@ -1,0 +1,254 @@
+*{
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+ zoom: 1;
+}
+
+section{
+  background-color: #D9AFD9;
+  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%); 
+}
+.meter {
+    box-sizing: content-box;
+    height: 20px; /* Can be anything */
+    position: relative;
+    margin: 15px 0 20px 0; /* Just for demo spacing */
+   
+    border-radius: 25px;
+    padding: 10px;
+    transition: all 1s ease-in;
+  }
+  .meter > span {
+    display: block;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(43, 194, 83);
+    background-image: linear-gradient(
+      center bottom,
+      rgb(43, 194, 83) 37%,
+      rgb(84, 240, 84) 69%
+    );
+   
+    position: relative;
+    overflow: hidden;
+  }
+  .meter > span:after,
+  .animate > span > span {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent
+    );
+    z-index: 1;
+    background-size: 50px 50px;
+    animation: move 2s linear infinite;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+    transition: all 1s ease-in;
+    border:none;
+  }
+  
+  .animate > span:after {
+    display: none;
+  }
+  
+  @keyframes move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 50px 50px;
+    }
+  }
+  
+  .aqua > span {
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    
+  }
+  
+  
+  .nostripes > span > span,
+  .nostripes > span::after {
+    background-image: none;
+  }
+  .progress{
+    transition: all 1s ease-in;
+    max-width: 100%;
+  }
+  #page-wrap {
+    width: 490px;
+    margin: 80px auto;
+  
+
+  }
+
+  .main{
+      background-color: beige;
+      height: auto;
+      width: 90%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     
+      flex-wrap: wrap;
+      border-radius: 20px;
+
+
+  }
+
+  .exam{
+    width: 100%;
+    display: grid;
+    grid-area: 1/1/auto/3 span;
+    grid-template-columns: repeat(auto-fit,1fr);
+    gap:50px;
+    justify-content: center;
+
+    
+  }
+  .question{
+   
+    font-size: 40px;
+    font-weight: bold;
+    grid-area: 1/1/ auto/3 span; 
+    grid-auto-rows: auto;
+    
+  }
+  .answers{
+    grid-area: 2/1/2/3 span;
+    width: 50%;
+    margin: auto;
+    width: 100%;
+  }
+  .answer{
+    font-size: 30px;
+    padding: 0px;
+    height: auto;
+    margin: 8px auto;
+    width: 100%;
+    border: 2px solid;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-left: 30px solid rgb(46, 46, 46);
+   
+
+  }
+
+  .marked{
+    grid-area: 1/4/auto/1 span;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);    
+    text-align: center;
+  }
+  .submit{
+    height: 100%;
+    grid-area: 4/1/1 span/3 span;
+   text-align: center;
+   width: 60px;
+
+  
+  }
+
+  .pages{
+    grid-area: 3/1/1 span/3 span;
+    width: 100%;
+    text-align: center;
+  }
+  .insideWrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  
+  }
+  .markedq{
+    width: 80%;
+    height: 50px;
+    margin: auto;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+        font-weight: bold;
+    color: black;
+
+  }
+  .submit button{
+    width: auto;
+    height: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin:  auto;
+  }
+#page{
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+}
+.next , .prevous{
+  width: 80px;
+  height: 50px;
+  font-size: 15px;
+  text-align: center;
+}
+.prevous{
+  display: none;
+}
+
+.rad-input{
+  margin: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: beige;
+}
+.temp{
+  visibility: hidden;
+}
+ 
+.done{
+  grid-area: 4/2/2 span/1 span;
+}
+.check{
+  background-image: radial-gradient( circle 828.6px at 10% 20%,  rgba(81,109,209,1) 0%, #E4E5E6 100% );
+}
+.btn-success{
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+   border: none;  
+}
+
+
+hr {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 100px;
+  border: 0;
+  height: 50px;
+
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(53, 53, 53, 0.75), rgba(255, 255, 255, 0));
+}

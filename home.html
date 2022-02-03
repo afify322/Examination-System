@@ -1,0 +1,193 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+<script src="./bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<link rel="stylesheet" href="style.css">
+       
+</head>
+<body>
+ <section>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+           <!--  <div class="carousel-inner">
+              <div class="carousel-item active">
+                </div>
+             
+            </div> -->
+          
+            <div class="wrapper d-flex ">
+                <div class="head">
+                    <i class="fas fa-graduation-cap "></i>
+                    <h5 style="color: rgb(14, 12, 12);">Do the best you can until you know better.</h5>
+                    <h5 style="color: rgb(14, 12, 12);"> Then when you know better, do better.</h5>
+                 </div>
+
+                  
+
+                  <div class="form-group d-flex ">
+                    <form action="" id="Loginform" method="post" class="regform" style="gap: 20px;">
+                      
+                       <div class="input">
+                        <input type="text" class="form-control" id="lemail" placeholder="Email">
+                        <i class="fas fa-check-circle correct"></i>
+                        <i class="fas fa-times-circle wrong"></i>
+                        <div class="alert alert-danger wlemail" role="alert">
+                           Invalid Email
+                          </div>
+                       </div>
+                       <div class="input">
+                        <input type="password" class="form-control" id="lpassword" placeholder="password">
+                        <i class="fas fa-check-circle correct"></i>
+                        <i class="fas fa-times-circle wrong"></i>
+                        <div class="alert alert-danger wlpassword" role="alert">
+                           Invalid Password
+                          </div>
+                       </div>
+        
+                      
+                       <div class="input  submit">
+                        <input type="submit" class="form-control" id="submit" value="Login">
+                       </div>
+        
+                    </form>
+                </div> 
+                <hr>
+                <div class="main-buttons d-flex flex-column align-self-center">
+
+                     <div class="reg">
+                         <img src="" alt="">
+                        <button type="button" class="main-button" data-bs-toggle="modal" data-bs-target="#regModal">
+                            <i class="fas fa-user-plus"></i>
+                            Signup
+                          </button>
+        
+                     </div>
+                  
+                  
+                     
+    
+    
+                 </div>
+               
+            </div>
+          </div>
+     
+    
+
+   
+      
+      <!-- Modal -->
+      <div class="modal fade" id="regModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Registration</h5>
+            
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-row">
+              <div class="modal-img">
+
+                <img src="./images//focused-people-studying-online-school_74855-5834.jpg" alt="">
+              </div>
+
+                <div class="form-group d-flex flex-column ">
+                    <form action="" id="regform" method="post" class="regform">
+                        <div class="head">
+                           
+                         </div>
+                       <div class="input  ">
+                          <input type="text" class="form-control" id="fname" placeholder="First name">
+                          <i class="fas fa-check-circle correct"></i>
+                          <i class="fas fa-times-circle wrong"></i>
+                          <div class="alert alert-danger wfname" role="alert">
+                          
+                          </div>
+                       </div>
+                       <div class="input  ">
+                        <input type="text" class="form-control" id="lname" placeholder="Last name"> 
+                        <i class="fas fa-check-circle correct"></i>
+                        <i class="fas fa-times-circle wrong"></i> 
+                        <div class="alert alert-danger wlname" role="alert">
+                          
+                          </div> 
+                       </div>
+                       <div class="input   ">
+                        <input type="email" class="form-control" id="email" placeholder="Email address">
+                        <i class="fas fa-check-circle correct"></i>
+                        <i class="fas fa-times-circle wrong"></i>
+                        <div class="alert alert-danger wemail" role="alert">
+                           Invalid Email
+                          </div>
+                       </div>
+                       <div class="input  ">
+                        <input type="password" class="form-control" id="password" placeholder="Password">
+                        <i class="fas fa-check-circle correct"></i>
+                        <i class="fas fa-times-circle wrong"></i>
+                        <div class="alert alert-danger wpassword" role="alert">
+                           
+                          </div>
+                       </div>
+        
+                       <div class="input ">
+                        <input type="password" class="form-control" id="password2" placeholder="Renter your password">
+                        <i class="fas fa-check-circle correct"></i>
+                        <i class="fas fa-times-circle wrong"></i>
+                        <div class="alert alert-danger wpassword2" role="alert">
+                            Please renter your password correct
+                          </div>
+                       </div>
+                       <div class="input  submit">
+                        <input type="submit" class="form-control" id="submit" value="Register">
+                       </div>
+        
+                    </form>
+                </div> 
+            </div>
+          
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+             
+            </div>
+          
+          </div>
+        </div>
+      </div>
+ </section>
+   
+</body>
+<script src="main.js"></script>
+</html>
