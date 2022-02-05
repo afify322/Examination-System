@@ -21,6 +21,11 @@ var interval=setInterval((e)=>{
 },1000) 
 
 function timeOut() {
+  for (let index = 1; index < 11; index++) {
+    
+    sessionStorage.removeItem('mark'+index,index)
+  }
+
   document.getElementsByClassName('timeout')[0].click()
 
 }
