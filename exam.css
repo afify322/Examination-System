@@ -193,7 +193,12 @@ section{
     background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
         font-weight: bold;
     color: black;
+<<<<<<< HEAD
   cursor: pointer;
+=======
+   cursor: pointer;
+
+>>>>>>> ce3ec9c5d45687cf55500ea27936b013d938295a
   }
   .submit button{
     width: auto;
