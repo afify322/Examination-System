@@ -396,12 +396,15 @@ a3.lastChild.click()
 stdSolve(questionId.getAttribute('id'),a3.lastChild.value)
 })
 
-function closeMarked({target}) {
+function closeMarked(e) {
+  var target=e.target;
+e.stopImmediatePropagation();
   sessionStorage.removeItem('mark'+target.id,target.id)
 
 }
 
-function appendMarked({target}) {
+function appendMarked(e) {
+  var target=e.target;
   console.log(target.id,index);
   if(index<+target.id){
     var times=(+target.id)-index;
