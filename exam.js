@@ -11,7 +11,7 @@ var index=1;
 var max=0;
 var val=5;
 var sum=0;
- var interval=setInterval((e)=>{
+var interval=setInterval((e)=>{
   sum=sum+val
   bar.style=`width:${sum}`
    if(sum>1500){
@@ -22,6 +22,7 @@ var sum=0;
 
 function timeOut() {
   document.getElementsByClassName('timeout')[0].click()
+
 }
 function Question(id,value) {
     this.id=id;
@@ -103,7 +104,6 @@ else{
   appendAnswers(x()[--index])
   
 }
-console.log(index);
   if(index==2)
     prevous.style='display:none;'
   
@@ -179,7 +179,7 @@ q4.setAnswer(a21)
 q5.setAnswers([a5,a22,a23])
 q5.setAnswer(a23);
 
-q6.setAnswers([a6,a24,a5])
+q6.setAnswers([a6,a24,a25])
 q6.setAnswer(a6);
 
 q7.setAnswers([a7,a26,a27])
@@ -202,15 +202,12 @@ return questions;
 
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
-    // While there remain elements to shuffle...
     while (currentIndex != 0) {
   
-      // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
 
       currentIndex--;
   
-      // And swap it with the current element.
       [array[currentIndex], array[randomIndex]] = [
         array[randomIndex], array[currentIndex]];
     }
@@ -273,15 +270,25 @@ function shuffle(array) {
 
   
   function markQuestion() {
-    var insideWrapper=document.getElementsByClassName('insideWrapper')[0];
-    var div=document.createElement('div');
-   
-    div.className='markedq alert alert-warning alert-dismissible fade show'
+    if(sessionStorage.getItem('mark'+index)!=index){
 
-div.innerHTML=` Question ${index} marked
-<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`
-
-    insideWrapper.appendChild(div);
+      var insideWrapper=document.getElementsByClassName('insideWrapper')[0];
+      var div=document.createElement('div');
+      var btn=document.createElement('button');
+      btn.className='btn-close';
+      btn.setAttribute("data-bs-dismiss","alert");
+      btn.setAttribute("aria-label","close");
+      btn.setAttribute("onclick","closeMarked(event)")
+      btn.id=index;
+      div.className='markedq alert alert-warning alert-dismissible fade show';
+      div.setAttribute('onclick','appendMarked(event)')
+      div.id=index;
+      div.innerHTML=` Question ${index} marked`
+      div.appendChild(btn)
+      sessionStorage.setItem('mark'+index,index)
+      insideWrapper.appendChild(div);
+    }
+    
   }
 
 
@@ -351,7 +358,8 @@ div.innerHTML=` Question ${index} marked
     }
 
 
-    document.getElementsByClassName('submit')[0].addEventListener('click',(e)=>{
+    function submit()
+    {
 
 
     finalGrade();
@@ -362,7 +370,9 @@ div.innerHTML=` Question ${index} marked
     window.localStorage.setItem('grades',finalGrade())
     window.location.replace('grades.html')  
 
-    })
+  }
+
+
 var a1=document.getElementsByClassName('answer')[0];
 a1.addEventListener('click',()=>{
 
@@ -379,3 +389,25 @@ a3.addEventListener('click',({target})=>{
 a3.lastChild.click()
 stdSolve(questionId.getAttribute('id'),a3.lastChild.value)
 })
+
+function closeMarked({target}) {
+  sessionStorage.removeItem('mark'+target.id,target.id)
+
+}
+
+function appendMarked({target}) {
+  console.log(target.id,index);
+  if(index<+target.id){
+    var times=(+target.id)-index;
+    for (let index = 0; index < times; index++) {
+     next.click()
+    }
+  }
+  else
+  {
+    var times=index-(+target.id);
+    for (let index = 0; index < times; index++) {
+     prevous.click()
+    }
+  }
+}
