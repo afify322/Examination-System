@@ -1,5 +1,6 @@
 
 
+
 var next=document.getElementsByClassName('next')[0];
 var prevous=document.getElementsByClassName('prevous')[0];
 var page=document.getElementById('page')
